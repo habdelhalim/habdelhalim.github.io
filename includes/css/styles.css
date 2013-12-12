@@ -3,9 +3,8 @@
 My Custom CSS
 =============
 
-Author:  Brad Hussey
-Updated: August 2013
-Notes:	 Hand coded for Udemy.com
+Author:  Hasan Abdel Halim
+Updated: Dec 2013
 
 */
 
@@ -29,12 +28,38 @@ Notes:	 Hand coded for Udemy.com
    width: 200px;
 }
    
+.navbar-brand {
+   padding: 13px 15px;
+}   
    
 /* --------------------------------------
    Carousel
    -------------------------------------- */
+#mainCarousel {
+   margin-top: 60px; 
+}
 
+.carousel-caption {
+   font-size: 24px;
+}
 
+.carousel-caption h4 {
+   font-size: 32px;
+}
+
+#mainCarousel .item { height: 400px; }
+
+#slide1 {
+   background: url('../../images/carousel_medium_01.jpg') top center no-repeat;
+}
+
+#slide2 {
+   background: url('../../images/carousel_medium_02.jpg') top center no-repeat;
+}
+
+#slide3 {
+   background: url('../../images/carousel_medium_03.jpg') top center no-repeat;
+}
 
 /* --------------------------------------
    Global Styles
@@ -53,10 +78,44 @@ Notes:	 Hand coded for Udemy.com
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+   #mainCarousel .item { height: 310px; }
+
+   .carousel-caption {
+      font-size: 16px;
+   }
+
+   .carousel-caption h4 {
+      font-size: 22px;
+   }
+
+   #slide1 {
+      background: url('../../images/carousel_small_01.jpg') top center no-repeat;
+   }
+
+   #slide2 {
+      background: url('../../images/carousel_small_02.jpg') top center no-repeat;
+   }
+
+   #slide3 {
+      background: url('../../images/carousel_small_03.jpg') top center no-repeat;
+   }
 	
 }
 
 /* Large desktop */
 @media (min-width: 1200px) {
-	
+	#mainCarousel .item { height: 500px; }
+
+   #slide1 {
+      background: url('../../images/carousel_large_01.jpg') top center no-repeat;
+   }
+
+   #slide2 {
+      background: url('../../images/carousel_large_02.jpg') top center no-repeat;
+   }
+
+   #slide3 {
+      background: url('../../images/carousel_large_03.jpg') top center no-repeat;
+   }
+
 }
