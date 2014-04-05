@@ -1,0 +1,10 @@
+{
+  "name": "habdelhalim.github.io",
+  "version": "0.0.2",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^0.4.0",
+    "grunt-contrib-connect": "^0.7.1"
+  }
+}
