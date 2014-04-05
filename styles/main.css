@@ -70,8 +70,12 @@ ul.unstyled {
 /* --------------------------------------
    Carousel
    -------------------------------------- */
-#mainCarousel {
+#bigCallout {
    margin-top: 60px; 
+}
+
+#mainCarousel {
+   margin-bottom: 20px; 
 }
 
 .carousel-caption {
