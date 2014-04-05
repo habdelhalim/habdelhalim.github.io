@@ -12,268 +12,21 @@
 		<!-- Mobile viewport optimized -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		
-		<!-- Bootstrap CSS -->
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
-		
-		<!-- Custom CSS -->
-		<link href="includes/css/styles.css" rel="stylesheet">
-		
-		<!-- Include Modernizr in the head, before any other Javascript -->
-		<script src="includes/js/modernizr-2.6.2.min.js"></script>
-		
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
 	</head>
-	<body>
-	
-	<div class="container" id="main">
-		<div class="navbar navbar-fixed-top">
-			<div class="container">
-				<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="/" class="navbar-brand"><img src="images/logo.png" alt="Site Logo"></a>
+	<body data-ng-app="habdelhalimgithubioApp">
 
-				<div class="nav-collapse collapse navbar-responsive-collapse">
-					<ul class="nav navbar-nav">
-						<li class="active">
-							<a href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Career <strong class="caret"></strong></a>
-
-							<ul class="dropdown-menu">
-								<li>
-									<a href="#">Web Design</a>
-								</li>
-								<li>
-									<a href="#">Development</a>
-								</li>
-
-								<li class="divider"></li>
-
-								<li class="dropdown-header">Open Source</li>
-								<li>
-									<a href="#">Projects &amp; Contributions</a>
-								</li>
-							</ul> <!-- dropdown-menu -->
-						</li>
-					</ul> <!-- navbar -->
-
-					<form class="navbar-form pull-left">
-						<input type="text" class="form-control" placeholder="Search this site...." id="searchInput"></input>
-						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-					</form> <!-- end navbar-form -->
-
-					<ul class="nav navbar-nav pull-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> About Me <strong class="caret"></strong></a>
-
-							<ul class="dropdown-menu">
-								<li>
-									<a href="#"><span class="glyphicon glyphicon-star"></span> Hasan Abdel Halim</a>
-								</li>
-
-								<li>
-									<a href="#"><span class="glyphicon glyphicon-star"></span> Resume </a>
-								</li>
-
-								<li class="divider"></li>
-								
-								<li>
-									<a href="#"><span class="glyphicon glyphicon-star-empty"></span> Other</a>
-								</li>
-							</ul>
-						</li>
-					</ul> <!-- pull-right -->
-
-				</div> <!-- end collapse -->
-			</div>
-		</div> <!-- end navbar -->
-
-		<div class="carousel slide" id="mainCarousel">
-			<!-- indicator -->
-			<ol class="carousel-indicators">
-				<li class="active" data-slide-to="0" data-target="#mainCarousel"></li>
-				<li data-slide-to="1" data-target="#mainCarousel"></li>
-				<li data-slide-to="2" data-target="#mainCarousel"></li>
-			</ol>
-
-			<!-- wrapper for the slide -->
-			<div class="carousel-inner">
-				<div class="item active" id="slide1">
-					<div class="carousel-caption">
-						<h4>SOUQ.com</h4>
-						<p>Customization and development of Apache Opentaps-based ERP system.
-						</p> 
-					</div><!-- carousel-caption -->
-				</div><!--end item -->
-
-				<div class="item" id="slide2">
-					<div class="carousel-caption">
-						<h4>Integrant Inc</h4>
-						<p>Development of Enterprise web applications and services using Java EE, Google Web Toolkit (GWT), GXT, Spring framework, and Hibernate</p>
-					</div><!-- carousel-caption -->
-				</div><!--end item -->
-
-				<div class="item" id="slide3">
-					<div class="carousel-caption">
-						<h4>ATS</h4>
-						<p> Senior Portal implementer and lead developer of Oracle Webcenter Suite, and Liferay Solutions.</p>
-					</div><!-- carousel-caption -->
-				</div><!--end item -->
-			</div> <!-- carousel-inner -->
-
-			<!-- Controls -->
-			<a href="#mainCarousel" class="left carousel-control" data-slide="prev"><span class="icon-prev"></span></a>
-			<a href="#mainCarousel" class="right carousel-control" data-slide="next"><span class="icon-next"></span></a>
-		</div> <!-- end of carousel -->
-
-		<div class="row" id="bigCallout">
-			<div class="col-12">
-
-				<!-- visible only on small devices -->
-				<div class="well well-small visible-sm">
-					<a href="" class="btn btn-large btn-block btn-default"><span class="glyphicon glyphicon-phone">Give me a call</span></a>
-				</div>
-				
-				<div class="well">
-					<div class="page-header">
-						<h1>Hasan Abdel Halim <small>Senior Software Engineer.</small></h1>
-					</div><!-- end page-header -->
-
-					<p class="lead"> Senior Programmer with over 6 years of Software Development experience, including Design, Code, Test, and Document software for a number of platforms. </p>
-					<p> I have worked in a variety of application areas. However, my specialist skills lie in the development of intranet and internet applications. </p>
-					<p> I have produced systems for several environments, particularly Windows, Linux and embedded systems. I develop software in Java, C++, C and PHP. I have a great deal of experience of developing software for internet and intranet applications. This includes Web services, Portals and Web applications. I am familiar with most of the current internet technologies including AJAX, (X)HTML, CSS, SOAP, etc. </p>
-					<p> I have worked on many developments on all stages of the development life-cycle, from analysis through design, programming and testing to installation. I have worked on one man projects and projects with 50 to 100 people. I have performed many roles, usually design or programming but also team leadership, support and testing. </p>
-					<p> I have a good academic record and considerable experience in the computer industry. I work hard and can provide excellent references from previous clients. </p>
-
-					<a href="http://jo.linkedin.com/in/hasanabdelhalim/" class="btn btn-large btn-primary">Resume</a>
-					<a href="http://jo.linkedin.com/in/hasanabdelhalim/" class="btn btn-large btn-link">Linked In</a>
-				</div> <!-- end well -->
-			</div>
-		</div> <!-- end of bigCallout -->
-
-		<div class="row" id="featuresHeading">
-			<div class="col-12">
-				<h2><span class="glyphicon glyphicon-briefcase"></span> Experience</h2>
-				<p class="lead">
-					<span class="label label-success">Java</span> <span class="label label-default">J2EE</span> 
-					<span class="label label-default">Spring</span> <span class="label label-default">J2SE</span>
-					<span class="label label-default">EJB3</span> <span class="label label-default">JPA2</span>
-					<span class="label label-default">Hibernate</span> <span class="label label-default">GWT</span>
-					<span class="label label-default">GXT</span> <span class="label label-success">PHP</span> 
-					<span class="label label-default">C</span> <span class="label label-default">C++</span>
-					<span class="label label-success">Python</span> <span class="label label-default">XHTML</span>
-					<span class="label label-default">XML</span> <span class="label label-success">SQL</span>
-				</p>
-			</div> <!-- end col-12 -->
-		</div> <!-- end of featuresHeading -->
-
-		<div class="row" id="features">
-			<div class="col-sm-4 feature">
-				<div class="panel">
-					<div class="panel-heading">
-						<h3 class="panel-title">SOUQ.com</h3>
-					</div> <!-- end panel-heading -->
-
-					<p>Customization and development of ERP system. </p>
-					<ul class="list-group">
-						<li class="list-group-item">Adapting the opentaps ERP system for Souq's business needs.</li>
-						<li class="list-group-item">The Design &amp; Development of brand new services, which help in speeding the warehouse operations like (picking, packing, and shipping).</li>
-						<li class="list-group-item">Optimization of core services like MRP, Inventory Movement and reservation logic.</li>
-						<li class="list-group-item">Design &amp; Development of system modules like API, Monitoring Alerts, and Dashboard that facilitate easy retrieval of ERP information through secured web interfaces using JSON, or XML.</li>
-					</ul>
-					<a href="http://souq.com/" target="_blank" class="btn btn-warning btn-block">Visit SOUQ.com</a>
-				</div> <!-- end panel -->
-			</div> <!-- end feature -->
-			
-			<div class="col-sm-4 feature">
-				<div class="panel">
-					<div class="panel-heading">
-						<h3 class="panel-title">Integrant Inc</h3>
-					</div> <!-- end panel-heading -->
-
-					<p>Development and maintenance of CRM solutions.</p>
-					<ul class="list-group">
-						<li class="list-group-item">Development of Enterprise web applications and services using Java EE, Google Web Toolkit (GWT), GXT, Spring framework, and Hibernate.</li>
-						<li class="list-group-item">Maintaining and enhancing an in house CRM solution that uses Apache Tapestry, Spring framework and Hibernate.</li>
-						<li class="list-group-item">Development of backend processes using Java SE, and Hibernate that provide integration layer with third party services like Authorize.net, Hostopia, and Lyris EmailLabs. Additionally, performing business related functionalities like Billing, and generating reports.</li>
-					</ul>
-					<a href="http://integrant.com/" target="_blank" class="btn btn-danger btn-block">Visit Integrant Inc</a>
-				</div> <!-- end panel -->
-			</div> <!-- end feature -->
-			
-			<div class="col-sm-4 feature">
-				<div class="panel">
-					<div class="panel-heading">
-						<h3 class="panel-title">ATS</h3>
-					</div> <!-- end panel-heading -->
-
-					<p>Development and implementation of Portal solutions.</p>
-					<ul class="list-group">
-						<li class="list-group-item">Senior Portal implementer and lead developer of Oracle Webcenter Suite, and Liferay Solutions.</li>
-						<li class="list-group-item">Development of Enterprise web applications and services using Oracle ADF 11g and Oracle Fusion Middleware.</li>
-						<li class="list-group-item">Development of Enterprise web applications using JSF2, EJB3, JPA2, and Hibernate.</li>
-						<li class="list-group-item">Customization and Personalization of Oracle Webcenter Spaces including custom services and Taskflows, Site templates, Page templates, and extending existing services.</li>
-						<li class="list-group-item">Integration with Oracle Universal Content Management (UCM) through JCR (JSR-170) standard and UCM's CIS service.</li>
-						<li class="list-group-item">Oracle SOA suite application development using BPEL.</li>
-					</ul>
-					<a href="http://www.ats-ware.com/" target="_blank" class="btn btn-info btn-block">Visit ATS</a>
-				</div> <!-- end panel -->
-			</div> <!-- end feature -->
-
-		</div> <!-- end of features -->
-
-		<div class="row" id="moreInfo">
-
-			<div class="col-sm-6" id="location">
-				<h3><span class="glyphicon glyphicon-map-marker"></span> Current Location <small>Amman, Jordan</small></h3>
-				<iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Amman,+Jordan&amp;aq=0&amp;oq=amman&amp;sll=37.0625,-95.677068&amp;sspn=43.123021,80.15625&amp;ie=UTF8&amp;hq=&amp;hnear=Amman,+Jordan&amp;t=m&amp;ll=31.956605,35.945721&amp;spn=0.014565,0.01708&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
-			</div><!-- end location -->
-
-			<div class="col-sm-6" id="education">
-				<h3><span class="glyphicon glyphicon-book"></span> Education <small><abbr title="Master of Science">MSc.</abbr>, <abbr title="Bachelor of Science">BSc.</abbr></small></h3>
-				<div class="tabbable">
-					<ul class="nav nav-tabs">
-						<li class="active"><a href="#tabGermany" data-toggle="tab">Germany</a></li>
-						<li><a href="#tabCyprus" data-toggle="tab">Cyprus, Turkey</a></li>
-					</ul>
-					<div class="tab-content">
-						<div class="tab-pane active" id="tabGermany">
-							<h4>Media Informatics <small>Rwth Aachen University</small></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-
-						</div><!-- end tabGermany -->
-						
-						<div class="tab-pane" id="tabCyprus">
-							<h4>Computer Engineering <small>EMU University</small></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-						</div><!-- end tabCyprus -->
-					</div>
-				</div>
-			</div><!-- education-->
-
-		</div> <!-- end of moreInfo -->
-
-		<hr>
-
-		<div class="row" id="moreCourses">
-		</div> <!-- end of moreCourses -->
-	</div> <!-- end of container -->
+    <div data-ng-view="" >
+    </div>
 
 	<footer>
 		<div class="container">
@@ -314,18 +67,28 @@
 	</footer>
 	<!-- All Javascript at the bottom of the page for faster page loading -->
 		
-	<!-- First try for the online version of jQuery-->
-	<script src="http://code.jquery.com/jquery.js"></script>
-	
-	<!-- If no online access, fallback to our hardcoded version of jQuery -->
-	<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
-	
-	<!-- Bootstrap JS -->
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	
-	<!-- Custom JS -->
-	<script src="includes/js/script.js"></script>
-	
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <!-- endbuild -->
 	</body>
 </html>
 
