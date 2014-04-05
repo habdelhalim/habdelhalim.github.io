@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		
-		<!-- Website Title & Description for Search Engine purposes -->
-		<title>Hasan Abdel Halim @ Git-Hub</title>
-		<meta name="author" content="Hasan Abdel Halim">
-		<meta name="description" content="Hasan Abdel Halim @ Git-Hub">
-		<meta name="keywords" content="Hasan Abdel Halim, Hasan, Abdel Halim, Java Engineer, Java Programmer, Software Engineer, Software Developer">
-		
-		<!-- Mobile viewport optimized -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		
+    <head>
+
+        <!-- Website Title & Description for Search Engine purposes -->
+        <title>Hasan Abdel Halim @ Git-Hub</title>
+        <meta name="author" content="Hasan Abdel Halim">
+        <meta name="description" content="Hasan Abdel Halim @ Git-Hub">
+        <meta name="keywords" content="Hasan Abdel Halim, Hasan, Abdel Halim, Java Engineer, Java Programmer, Software Engineer, Software Developer">
+
+        <!-- Mobile viewport optimized -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
@@ -22,56 +22,108 @@
         <!-- build:css({.tmp,app}) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
-	</head>
-	<body data-ng-app="habdelhalimgithubioApp">
+    </head>
+    <body data-ng-app="habdelhalimgithubioApp">
 
-    <div data-ng-view="" >
-    </div>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" >
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand"><img src="images/logo.png" alt="Site Logo"/></a>
+                </div> <!-- navbar-header -->
 
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-2">
-					<h6>Copyright &copy; 2013</h6>
-				</div> <!-- end col-sm-2 -->
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Career <strong class="caret"></strong></a>
 
-				<div class="col-sm-4">
-					<h6>About me</h6>
-					<p>Software Engineer crazy about programming, and problems solving. 
-						I like learning new programming languages, and always eager to know new ways to solve issues at hand. </p>
-				</div> <!-- end col-sm-4 -->
+                            <ul class="dropdown-menu">
+                                <li> <a href="#">Web Design</a> </li>
+                                <li> <a href="#">Development</a> </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Open Source</li>
+                                <li> <a href="#">Projects &amp; Contributions</a> </li>
+                            </ul> <!-- dropdown-menu -->
+                        </li>
+                    </ul> <!-- navbar -->
 
-				<div class="col-sm-2">
-					<h6>Navigation</h6>
-					<ul class="unstyled">
-						<li><a href="">Home</a></li>
-						<li><a href="">Career</a></li>
-						<li><a href="">About me</a></li>
-						<li><a href="">Contact</a></li>
-					</ul>
-				</div> <!-- end col-sm-2 -->
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search this site...." id="searchInput"/>
+                        </div>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </form> <!-- end navbar-form -->
 
-				<div class="col-sm-2">
-					<h6>Follow me</h6>
-					<ul class="unstyled">
-						<li><a href="#" class="pop" data-toggle="popover" data-placement="top" data-original-title="Try Harder !!" data-content="It's not gonna be that easy !!!">Catch me if you can !</a> </li>
-					</ul>
-				</div> <!-- end col-sm-2 -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> About Me <strong class="caret"></strong></a>
 
-				<div class="col-sm-2">
-					<h6>Coded with <span class="glyphicon glyphicon-heart"></span> by Hasan</h6>
-				</div> <!-- end col-sm-2 -->
+                            <ul class="dropdown-menu">
+                                <li> <a href="#"><span class="glyphicon glyphicon-star"></span> Hasan Abdel Halim</a> </li>
+                                <li> <a href="#"><span class="glyphicon glyphicon-star"></span> Resume </a> </li>
+                                <li class="divider"></li>
+                                <li> <a href="#"><span class="glyphicon glyphicon-star-empty"></span> Other</a> </li>
+                            </ul>
+                        </li>
+                    </ul> <!-- pull-right -->
 
-			</div> <!-- end row -->
-		</div> <!-- container -->
-	</footer>
-	<!-- All Javascript at the bottom of the page for faster page loading -->
-		
+                </div> <!-- end collapse -->
+            </div>
+        </div> <!-- end navbar -->
 
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
+        <div data-ng-view="" class="container" > </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <h6>Copyright &copy; 2013</h6>
+                    </div> <!-- end col-sm-2 -->
+
+                    <div class="col-sm-4">
+                        <h6>About me</h6>
+                        <p>Software Engineer crazy about programming, and problems solving. 
+                            I like learning new programming languages, and always eager to know new ways to solve issues at hand. </p>
+                    </div> <!-- end col-sm-4 -->
+
+                    <div class="col-sm-2">
+                        <h6>Navigation</h6>
+                        <ul class="unstyled">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Career</a></li>
+                            <li><a href="">About me</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div> <!-- end col-sm-2 -->
+
+                    <div class="col-sm-2">
+                        <h6>Follow me</h6>
+                        <ul class="unstyled">
+                            <li><a href="#" class="pop" data-toggle="popover" data-placement="top" data-original-title="Try Harder !!" data-content="It's not gonna be that easy !!!">Catch me if you can !</a> </li>
+                        </ul>
+                    </div> <!-- end col-sm-2 -->
+
+                    <div class="col-sm-2">
+                        <h6>Coded with <span class="glyphicon glyphicon-heart"></span> by Hasan</h6>
+                    </div> <!-- end col-sm-2 -->
+
+                </div> <!-- end row -->
+            </div> <!-- container -->
+        </footer>
+        <!-- All Javascript at the bottom of the page for faster page loading -->
+
+
+        <!--[if lt IE 9]>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
@@ -89,6 +141,6 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
-	</body>
+    </body>
 </html>
 
