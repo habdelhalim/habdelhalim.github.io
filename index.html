@@ -1,146 +1,130 @@
 <!DOCTYPE html>
+<html lang="en" data-ng-app="profile">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hasan Abdel Halim">
+  <meta name="author" content="Hasan Abdel Halim">
+  <meta name="fragment" content="!">
+  <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-<html>
-    <head>
+  <title>Hasan Abdel Halim</title>
 
-        <!-- Website Title & Description for Search Engine purposes -->
-        <title>Hasan Abdel Halim @ Git-Hub</title>
-        <meta name="author" content="Hasan Abdel Halim">
-        <meta name="description" content="Hasan Abdel Halim @ Git-Hub">
-        <meta name="keywords" content="Hasan Abdel Halim, Hasan, Abdel Halim, Java Engineer, Java Programmer, Software Engineer, Software Developer">
+  <!-- Bootstrap core CSS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-        <!-- Mobile viewport optimized -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"> -->
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <!-- Custom styles for this template -->
+  <link href="static/main.css" rel="stylesheet">
 
-        <!-- build:css({.tmp,app}) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+  <!-- Angular js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.8/angular.min.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+  <script src="static/js/profile.js"></script>
+
+  <!-- Just for debugging purposes. Don't actually copy this line! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
     </head>
-    <body data-ng-app="habdelhalimgithubioApp">
 
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" >
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="/" class="navbar-brand"><img src="images/logo.png" alt="Site Logo"/></a>
-                </div> <!-- navbar-header -->
+    <body data-ng-controller="ProfileCtrl">
 
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Career <strong class="caret"></strong></a>
+      <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a href="{{profile.publicProfileUrl}}" class="navbar-brand"><span class="glyphicon glyphicon-user"></span> {{profile.formattedName}}</a>
+              <p class="navbar-text navbar-right hidden-xs"> <small>{{profile.headline}}</small></p>
+            </div> <!-- end navbar-header -->
+          </div>
+        </nav>
 
-                            <ul class="dropdown-menu">
-                                <li> <a href="#">Web Design</a> </li>
-                                <li> <a href="#">Development</a> </li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Open Source</li>
-                                <li> <a href="#">Projects &amp; Contributions</a> </li>
-                            </ul> <!-- dropdown-menu -->
-                        </li>
-                    </ul> <!-- navbar -->
+        <div class="row">
 
-                    <form class="navbar-form navbar-left">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search this site...." id="searchInput"/>
-                        </div>
-                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                    </form> <!-- end navbar-form -->
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> About Me <strong class="caret"></strong></a>
-
-                            <ul class="dropdown-menu">
-                                <li> <a href="#"><span class="glyphicon glyphicon-star"></span> Hasan Abdel Halim</a> </li>
-                                <li> <a href="#"><span class="glyphicon glyphicon-star"></span> Resume </a> </li>
-                                <li class="divider"></li>
-                                <li> <a href="#"><span class="glyphicon glyphicon-star-empty"></span> Other</a> </li>
-                            </ul>
-                        </li>
-                    </ul> <!-- pull-right -->
-
-                </div> <!-- end collapse -->
+          <div class="col-md-7">
+            <div class="well visible-sm  visible-xs">
+              <h1 class="page-header"><a href="{{profile.publicProfileUrl}}" class="pull-right  text-muted"><span class="glyphicon glyphicon-link"></span></a>  {{profile.formattedName}}</h1>
+              <img class="thumbnail pull-left" src="/static/img/profile.jpg" alt="profile image">
+              <p>{{profile.summary}}</p>
             </div>
-        </div> <!-- end navbar -->
 
-        <div data-ng-view="" class="container" > </div>
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-briefcase"></span>   Experience</div>
+              <div class="list-group">
+                <a href=""  class="list-group-item" data-ng-repeat="position in profile.positions.values">
+                  <h4 class="list-group-item-heading">
+                    {{position.company.name }} - <small>{{position.title}}</small> 
+                    <small class="pull-right badge">{{position.startDate.year}}</small>
+                  </h4>
+                  <p class="list-group-item-text job-desc text-muted">{{position.summary|nl2br}}</p>
+                </a>
+              </div>
+            </div> <!-- end-panel -->
 
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <h6>Copyright &copy; 2013</h6>
-                    </div> <!-- end col-sm-2 -->
+          </div>
 
-                    <div class="col-sm-4">
-                        <h6>About me</h6>
-                        <p>Software Engineer crazy about programming, and problems solving. 
-                            I like learning new programming languages, and always eager to know new ways to solve issues at hand. </p>
-                    </div> <!-- end col-sm-4 -->
+          <div class="col-md-5">
+            <div class="well hidden-sm hidden-xs">
+              <h1 class="page-header"><a href="{{profile.publicProfileUrl}}" class="pull-right  text-muted"><span class="glyphicon glyphicon-link"></span></a> {{profile.formattedName}} </h1>
+              <img class="thumbnail pull-right" src="/static/img/profile.jpg" alt="profile image">
+              <p>{{profile.summary}}</p>
+            </div>
 
-                    <div class="col-sm-2">
-                        <h6>Navigation</h6>
-                        <ul class="unstyled">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Career</a></li>
-                            <li><a href="">About me</a></li>
-                            <li><a href="">Contact</a></li>
-                        </ul>
-                    </div> <!-- end col-sm-2 -->
+            <h4><span class="glyphicon glyphicon-book"></span>  Education</h4>
+            <ul class="list-group">
+              <li class="list-group-item" data-ng-repeat="education in profile.educations.values">
+                <h4 class="list-group-item-heading">{{education.schoolName}}</h4>
+                <p class="list-group-item-text">
+                 {{education.degree}} {{education.fieldOfStudy}}
+               </p>
+             </li>
+           </ul>      
 
-                    <div class="col-sm-2">
-                        <h6>Follow me</h6>
-                        <ul class="unstyled">
-                            <li><a href="#" class="pop" data-toggle="popover" data-placement="top" data-original-title="Try Harder !!" data-content="It's not gonna be that easy !!!">Catch me if you can !</a> </li>
-                        </ul>
-                    </div> <!-- end col-sm-2 -->
+           <h4> <span class="glyphicon glyphicon-flag"></span> Languages</h4>
+           <ul class="list-group">
+            <li class="list-group-item" data-ng-repeat="lang in profile.languages.values">
+              <span >{{lang.language.name}} </span>
+            </li>
+          </ul>
 
-                    <div class="col-sm-2">
-                        <h6>Coded with <span class="glyphicon glyphicon-heart"></span> by Hasan</h6>
-                    </div> <!-- end col-sm-2 -->
+          <h4> <span class="glyphicon glyphicon-flag"></span> Skills</h4>
+          <p id="skills">
+            <span class="badge" data-ng-repeat="skill in profile.skills.values">
+              {{skill.skill.name}}
+            </span>
+          </p>
 
-                </div> <!-- end row -->
-            </div> <!-- container -->
-        </footer>
-        <!-- All Javascript at the bottom of the page for faster page loading -->
+        </div>
+
+      </div> <!-- end-row -->
+
+      <div class="row marketing">
+      </div>
+
+      <div class="footer">
+        <p>&copy; <a href="{{profile.publicProfileUrl}}">habdelhalim 2014</a></p>
+      </div>
+
+    </div> <!-- /container -->
 
 
-        <!--[if lt IE 9]>
-        <script src="bower_components/es5-shim/es5-shim.js"></script>
-        <script src="bower_components/json3/lib/json3.min.js"></script>
-        <![endif]-->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Latest compiled and minified JavaScript -->
+<!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-cookies.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-sanitize.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.min.js"></script>
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
-    </body>
+  <!-- Placed at the end of the document so the pages load faster -->
+</body>
 </html>
-
