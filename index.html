@@ -56,16 +56,14 @@
               <p>{{profile.summary}}</p>
             </div>
 
-            <div class="panel panel-default">
-              <div class="panel-heading"><span class="glyphicon glyphicon-briefcase"></span>   Experience</div>
-              <div class="list-group">
-                <a href=""  class="list-group-item" data-ng-repeat="position in profile.positions.values">
-                  <h4 class="list-group-item-heading">
-                    {{position.company.name }} - <small>{{position.title}}</small> 
-                    <small class="pull-right badge">{{position.startDate.year}}</small>
-                  </h4>
-                  <p class="list-group-item-text job-desc text-muted">{{position.summary|nl2br}}</p>
-                </a>
+            <div class="panel panel-info" data-ng-class="{'current': position.isCurrent}" data-ng-repeat="position in positions">
+              <div class="panel-heading">
+                <span class="glyphicon glyphicon-briefcase"></span> {{position.company}} - <small>{{position.title}}</small> <small class="pull-right badge">{{position.startDate}}</small>
+              </div>
+              <div class="panel-body">
+                <ul>
+                  <li data-ng-repeat="itm in position.items"> {{itm}} </li>
+                </ul>
               </div>
             </div> <!-- end-panel -->
 
@@ -75,8 +73,15 @@
             <div class="well hidden-sm hidden-xs">
               <h1 class="page-header"><a href="{{profile.publicProfileUrl}}" class="pull-right  text-muted"><span class="glyphicon glyphicon-link"></span></a> {{profile.formattedName}} </h1>
               <img class="thumbnail pull-right" src="/static/img/profile.jpg" alt="profile image">
-              <p>{{profile.summary}}</p>
+              <p data-ng-repeat="pr in profile.para()">{{pr}}</p>
             </div>
+
+            <h4> <span class="glyphicon glyphicon-flag"></span> Skills</h4>
+            <p id="skills">
+              <span class="badge" data-ng-repeat="skill in profile.skills.values">
+                {{skill.skill.name}}
+              </span>
+            </p>
 
             <h4><span class="glyphicon glyphicon-book"></span>  Education</h4>
             <ul class="list-group">
@@ -95,13 +100,6 @@
             </li>
           </ul>
 
-          <h4> <span class="glyphicon glyphicon-flag"></span> Skills</h4>
-          <p id="skills">
-            <span class="badge" data-ng-repeat="skill in profile.skills.values">
-              {{skill.skill.name}}
-            </span>
-          </p>
-
         </div>
 
       </div> <!-- end-row -->
@@ -110,7 +108,7 @@
       </div>
 
       <div class="footer">
-        <p>&copy; <a href="{{profile.publicProfileUrl}}">habdelhalim 2014</a></p>
+        <p >&copy; <a href="{{profile.publicProfileUrl}}">Hasan Abdel Halim 2014</a></p>
       </div>
 
     </div> <!-- /container -->
@@ -119,6 +117,6 @@
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->
-  <!-- Placed at the end of the document so the pages load faster -->
-</body>
-</html>
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+  </html>
