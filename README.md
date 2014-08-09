@@ -1,4 +1,7 @@
 habdelhalim.github.io
 =====================
 
-Personal Website using various technologies .
+Hasan Abdel Halim's Personal Website developed using various technologies.
+
+
+
