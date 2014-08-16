@@ -52,8 +52,8 @@
           <div class="col-md-7">
             <div class="well visible-sm  visible-xs">
               <h1 class="page-header"><a href="{{profile.publicProfileUrl}}" class="pull-right  text-muted"><span class="glyphicon glyphicon-link"></span></a>  {{profile.formattedName}}</h1>
-              <img class="thumbnail pull-left" src="/static/img/profile.jpg" alt="profile image">
-              <p>{{profile.summary}}</p>
+              <img class="thumbnail" src="/static/img/profile.jpg" alt="profile image">
+              <p data-ng-repeat="pr in profile.para()">{{pr}}</p>
             </div>
 
             <div class="panel panel-info" data-ng-class="{'current': position.isCurrent}" data-ng-repeat="position in positions">
@@ -72,7 +72,7 @@
           <div class="col-md-5">
             <div class="well hidden-sm hidden-xs">
               <h1 class="page-header"><a href="{{profile.publicProfileUrl}}" class="pull-right  text-muted"><span class="glyphicon glyphicon-link"></span></a> {{profile.formattedName}} </h1>
-              <img class="thumbnail pull-right" src="/static/img/profile.jpg" alt="profile image">
+              <img class="thumbnail" src="/static/img/profile.jpg" alt="profile image">
               <p data-ng-repeat="pr in profile.para()">{{pr}}</p>
             </div>
 

@@ -73,14 +73,6 @@ p.job-desc {
   margin: 2px 2px;
 }
 
-.thumbnail.pull-right {
-  margin-left: 10px;
-}
-
-.thumbnail.pull-left {
-  margin-right: 10px;
-}
-
 .well {
 
 }
@@ -88,6 +80,25 @@ p.job-desc {
 
 }
 
+.thumbnail {
+  float: left;
+  margin: 0px 20px 20px 0px;
+}
+
+
 @media screen and (max-width: 768px) {
 
+}
+
+@media (max-width: 480px) {
+  
+  .thumbnail {
+    margin: 30px auto;
+    text-align: center;
+    float: none;
+  }
+  
+  .well p {
+    text-align: justify;
+  }
 }
