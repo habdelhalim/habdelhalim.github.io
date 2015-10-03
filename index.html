@@ -18,6 +18,8 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
   <!-- Custom styles for this template -->
   <link href="static/main.css" rel="stylesheet">
 
@@ -38,23 +40,26 @@
     <body data-ng-controller="ProfileCtrl">
 
       <div class="container">
-        <nav class="navbar navbar-default navbar-fixed-top">
+
+        <div class="jumbotron">
           <div class="container">
-            <div class="navbar-header">
-              <a href="{{profile.publicProfileUrl}}" class="navbar-brand"><span class="glyphicon glyphicon-user"></span> {{profile.formattedName}}</a>
-              <p class="navbar-text navbar-right hidden-xs"> <small>{{profile.headline}}</small></p>
-            </div> <!-- end navbar-header -->
+            <h1>Hasan Abdel Halim</h1>
+            <a href="{{profile.publicProfileUrl}}" class="thumbnail" rel="Hasan Abdel Halim's profile"> 
+              <img src="/static/img/profile.jpg" alt="Hasan Abdel Halim"> 
+            </a> 
+            <p>I am a Senior Programmer with over 7 years of Software Development experience, including Design, Code, Test, and Document software for a number of platforms. I have worked in a variety of application areas. However, my specialist skills lie in the development of intranet and internet applications.  </p>
+            <hr>
+            <h4> <span class="glyphicon glyphicon-flag"></span> Skills :</h4>
+            <p id="skills">
+              <span class="badge" data-ng-repeat="skill in profile.skills.values">
+                {{skill.skill.name}}
+              </span>
+            </p>
           </div>
-        </nav>
+        </div>
 
         <div class="row">
-
-          <div class="col-md-7">
-            <div class="well visible-sm  visible-xs">
-              <h1 class="page-header"><a href="{{profile.publicProfileUrl}}" class="pull-right  text-muted"><span class="glyphicon glyphicon-link"></span></a>  {{profile.formattedName}}</h1>
-              <img class="thumbnail" src="/static/img/profile.jpg" alt="profile image">
-              <p data-ng-repeat="pr in profile.para()">{{pr}}</p>
-            </div>
+          <div class="col-md-8">
 
             <div class="panel panel-info" data-ng-class="{'current': position.isCurrent}" data-ng-repeat="position in positions">
               <div class="panel-heading">
@@ -69,37 +74,28 @@
 
           </div>
 
-          <div class="col-md-5">
-            <div class="well hidden-sm hidden-xs">
-              <h1 class="page-header"><a href="{{profile.publicProfileUrl}}" class="pull-right  text-muted"><span class="glyphicon glyphicon-link"></span></a> {{profile.formattedName}} </h1>
-              <img class="thumbnail" src="/static/img/profile.jpg" alt="profile image">
+          <div class="col-md-4">
+            <div class="well">
+              <h4><span class="glyphicon glyphicon-user"></span>  About Me</h4>
               <p data-ng-repeat="pr in profile.para()">{{pr}}</p>
+
+              <hr>
+              
+               <h4><span class="glyphicon glyphicon-book"></span>  Education</h4>
+               <ul class="list-group">
+                  <li class="list-group-item" data-ng-repeat="education in profile.educations.values">
+                    <span >{{education.degree}} {{education.fieldOfStudy}}</span>
+                 </li>
+               </ul>      
+
+              <hr>
+               <h4> <span class="glyphicon glyphicon-flag"></span> Languages</h4>
+               <ul class="list-group">
+                <li class="list-group-item" data-ng-repeat="lang in profile.languages.values">
+                  <span >{{lang.language.name}} </span>
+                </li>
+              </ul>
             </div>
-
-            <h4> <span class="glyphicon glyphicon-flag"></span> Skills</h4>
-            <p id="skills">
-              <span class="badge" data-ng-repeat="skill in profile.skills.values">
-                {{skill.skill.name}}
-              </span>
-            </p>
-
-            <h4><span class="glyphicon glyphicon-book"></span>  Education</h4>
-            <ul class="list-group">
-              <li class="list-group-item" data-ng-repeat="education in profile.educations.values">
-                <h4 class="list-group-item-heading">{{education.schoolName}}</h4>
-                <p class="list-group-item-text">
-                 {{education.degree}} {{education.fieldOfStudy}}
-               </p>
-             </li>
-           </ul>      
-
-           <h4> <span class="glyphicon glyphicon-flag"></span> Languages</h4>
-           <ul class="list-group">
-            <li class="list-group-item" data-ng-repeat="lang in profile.languages.values">
-              <span >{{lang.language.name}} </span>
-            </li>
-          </ul>
-
         </div>
 
       </div> <!-- end-row -->
@@ -108,7 +104,7 @@
       </div>
 
       <div class="footer">
-        <p >&copy; <a href="{{profile.publicProfileUrl}}">Hasan Abdel Halim 2014</a></p>
+        <p class="pull-right" ><a href="{{profile.publicProfileUrl}}" rel="Hasan Abdel Halim">Hasan Abdel Halim 2015</a> &copy; </p>
       </div>
 
     </div> <!-- /container -->
