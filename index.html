@@ -28,6 +28,7 @@
   <script src="static/js/app.js"></script>
   <script src="static/js/profile/profile.service.js"></script>
   <script src="static/js/profile/profile.controller.js"></script>
+  <script src="static/js/profile/profile.directive.js"></script>
 </head>
 
 <body data-ng-controller="ProfileController">
@@ -54,20 +55,7 @@
 
   <div class="row">
     <div class="col-md-8">
-
-      <div class="panel panel-info" data-ng-class="{'current': position.isCurrent}" data-ng-repeat="position in positions">
-        <div class="panel-heading">
-          <span class="glyphicon glyphicon-briefcase"></span> {{position.company}} -
-          <small>{{position.title}}</small>
-          <small class="pull-right badge">{{position.startDate}}</small>
-        </div>
-        <div class="panel-body">
-          <ul>
-            <li data-ng-repeat="itm in position.items"> {{itm}}</li>
-          </ul>
-        </div>
-      </div> <!-- end-panel -->
-
+      <job position="position" data-ng-repeat="position in positions"></job>
     </div>
 
     <div class="col-md-4">

@@ -4,5 +4,5 @@
 (function () {
   "use strict";
 
-  var app = angular.module('profile', ['profile.service', 'profile.controller']);
+  var app = angular.module('profile', ['profile.service', 'profile.controller', 'profile.directive']);
 })();
