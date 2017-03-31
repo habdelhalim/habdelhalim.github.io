@@ -13,111 +13,106 @@
 
   <!-- Bootstrap core CSS -->
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Custom styles for this template -->
   <link href="static/main.css" rel="stylesheet">
 
   <!-- Angular js -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
   <script src="static/js/profile.js"></script>
 
-  <!-- Just for debugging purposes. Don't actually copy this line! -->
-  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+</head>
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-    </head>
+<body data-ng-controller="ProfileCtrl">
 
-    <body data-ng-controller="ProfileCtrl">
+<div class="container">
 
-      <div class="container">
-
-        <div class="jumbotron">
-          <div class="container">
-            <h1>Hasan Abdel Halim</h1>
-            <a href="{{profile.publicProfileUrl}}" class="thumbnail" rel="Hasan Abdel Halim's profile"> 
-              <img src="/static/img/profile.jpg" alt="Hasan Abdel Halim"> 
-            </a> 
-            <p>I am a Senior Programmer with over 7 years of Software Development experience, including Design, Code, Test, and Document software for a number of platforms. I have worked in a variety of application areas. However, my specialist skills lie in the development of intranet and internet applications.  </p>
-            <hr>
-            <h4> <span class="glyphicon glyphicon-flag"></span> Skills :</h4>
-            <p id="skills">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Hasan Abdel Halim</h1>
+      <a href="{{profile.publicProfileUrl}}" class="thumbnail" rel="Hasan Abdel Halim's profile">
+        <img src="/static/img/profile.jpg" alt="Hasan Abdel Halim">
+      </a>
+      <p>I am a Senior Software Engineer with over 12 years of Software Development experience, including Design, Code, Test, and Document software for a number of platforms. I
+        have worked in a variety of application areas. However, my specialist skills lie in the development of intranet and internet applications. </p>
+      <hr>
+      <h4><span class="glyphicon glyphicon-flag"></span> Skills :</h4>
+      <p id="skills">
               <span class="badge" data-ng-repeat="skill in profile.skills.values">
                 {{skill.skill.name}}
               </span>
-            </p>
-          </div>
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+
+      <div class="panel panel-info" data-ng-class="{'current': position.isCurrent}" data-ng-repeat="position in positions">
+        <div class="panel-heading">
+          <span class="glyphicon glyphicon-briefcase"></span> {{position.company}} -
+          <small>{{position.title}}</small>
+          <small class="pull-right badge">{{position.startDate}}</small>
         </div>
-
-        <div class="row">
-          <div class="col-md-8">
-
-            <div class="panel panel-info" data-ng-class="{'current': position.isCurrent}" data-ng-repeat="position in positions">
-              <div class="panel-heading">
-                <span class="glyphicon glyphicon-briefcase"></span> {{position.company}} - <small>{{position.title}}</small> <small class="pull-right badge">{{position.startDate}}</small>
-              </div>
-              <div class="panel-body">
-                <ul>
-                  <li data-ng-repeat="itm in position.items"> {{itm}} </li>
-                </ul>
-              </div>
-            </div> <!-- end-panel -->
-
-          </div>
-
-          <div class="col-md-4">
-            <div class="well">
-              <h4><span class="glyphicon glyphicon-user"></span>  About Me</h4>
-              <p data-ng-repeat="pr in profile.para()">{{pr}}</p>
-
-              <hr>
-              
-               <h4><span class="glyphicon glyphicon-book"></span>  Education</h4>
-               <ul class="list-group">
-                  <li class="list-group-item" data-ng-repeat="education in profile.educations.values">
-                    <span >{{education.degree}} {{education.fieldOfStudy}}</span>
-                 </li>
-               </ul>      
-
-              <hr>
-               <h4> <span class="glyphicon glyphicon-flag"></span> Languages</h4>
-               <ul class="list-group">
-                <li class="list-group-item" data-ng-repeat="lang in profile.languages.values">
-                  <span >{{lang.language.name}} </span>
-                </li>
-              </ul>
-            </div>
+        <div class="panel-body">
+          <ul>
+            <li data-ng-repeat="itm in position.items"> {{itm}}</li>
+          </ul>
         </div>
+      </div> <!-- end-panel -->
 
-      </div> <!-- end-row -->
+    </div>
 
-      <div class="row marketing">
+    <div class="col-md-4">
+      <div class="well">
+        <h4><span class="glyphicon glyphicon-user"></span> About Me</h4>
+        <p data-ng-repeat="pr in profile.para()">{{pr}}</p>
+
+        <hr>
+
+        <h4><span class="glyphicon glyphicon-book"></span> Education</h4>
+        <ul class="list-group">
+          <li class="list-group-item" data-ng-repeat="education in profile.educations.values">
+            <span>{{education.degree}} {{education.fieldOfStudy}}</span>
+          </li>
+        </ul>
+
+        <hr>
+        <h4><span class="glyphicon glyphicon-flag"></span> Languages</h4>
+        <ul class="list-group">
+          <li class="list-group-item" data-ng-repeat="lang in profile.languages.values">
+            <span>{{lang.language.name}} </span>
+          </li>
+        </ul>
       </div>
+    </div>
 
-      <div class="footer">
-        <p class="pull-right" ><a href="{{profile.publicProfileUrl}}" rel="Hasan Abdel Halim">Hasan Abdel Halim 2015</a> &copy; </p>
-      </div>
+  </div> <!-- end-row -->
 
-    </div> <!-- /container -->
+  <div class="row marketing">
+  </div>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <div class="footer">
+    <p class="pull-right"><a href="{{profile.publicProfileUrl}}" rel="Hasan Abdel Halim">Hasan Abdel Halim 2015</a> &copy; </p>
+  </div>
 
-  </body>
-  </html>
+</div> <!-- /container -->
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
