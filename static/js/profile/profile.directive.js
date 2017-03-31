@@ -5,16 +5,15 @@
   "use strict";
 
   var module = angular.module('profile.directive', []);
-  module.directive('profileImage', function () {
+  module.directive('profileIntro', function () {
     return {
       restrict: 'E',
       scope: {
         profile: '='
       },
-      template: '<a href="{{profile.publicProfileUrl}}" class="thumbnail" rel="Hasan Abdel Halim\'s profile"> <img src="/static/img/profile.jpg" alt="Hasan Abdel Halim"> </a>'
+      templateUrl: 'static/js/profile/profile.intro.html'
     }
   });
-
 
   module.directive('job', function () {
     return {

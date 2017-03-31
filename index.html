@@ -34,29 +34,21 @@
 <body data-ng-controller="ProfileController">
 
 <div class="container">
-
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Hasan Abdel Halim</h1>
-      <profile-image profile="profile"></profile-image>
-      <p>I am a Senior Software Engineer with over 14 years of Software Development experience, including Design, Code, Test, and Document software for a number of platforms. I
-        have worked in a variety of application areas. However, my specialist skills lie in the development of intranet and internet applications. </p>
-      <hr>
-      <skills skills="profile.skills.values"></skills>
+  <div class="row">
+    <div class="col-md-12">
+      <profile-intro profile="profile"></profile-intro>
     </div>
   </div>
-
   <div class="row">
     <div class="col-md-8">
       <job position="position" data-ng-repeat="position in positions"></job>
     </div>
 
     <div class="col-md-4">
-      <div class="well">
+      <div class="row">
         <about-me profile="profile"></about-me>
-        <hr>
+        <skills skills="profile.skills.values"></skills>
         <education educations="profile.educations.values"></education>
-        <hr>
         <language languages="profile.languages.values"></language>
       </div>
     </div>
