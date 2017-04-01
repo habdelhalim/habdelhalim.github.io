@@ -2,6 +2,8 @@
 body {
   padding-top: 10px;
   padding-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #545E6C;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -16,6 +18,7 @@ body {
 .header {
   border-bottom: 1px solid #e5e5e5;
 }
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   padding-bottom: 19px;
@@ -40,6 +43,7 @@ body {
   border-bottom: 1px solid #e5e5e5;
   padding: 10px;
 }
+
 .jumbotron .btn {
   padding: 14px 24px;
   font-size: 21px;
@@ -49,6 +53,7 @@ body {
 .marketing {
   margin: 40px 0;
 }
+
 .marketing p + h4 {
   margin-top: 28px;
 }
@@ -76,6 +81,7 @@ p.job-desc {
 .well {
 
 }
+
 .current {
 
 }
@@ -85,19 +91,41 @@ p.job-desc {
   margin: 0px 20px 20px 0px;
 }
 
+.item {
+  margin-bottom: 30px;
+}
+
+.position-title {
+  color: #3F4650;
+}
+
+.position-time {
+  color: #97AAC3;
+  font-size: 0.54em;
+  float: right !important;
+}
+
+.position-company {
+  margin-bottom: 10px;
+  color: #97AAC3;
+}
+
+.position-details {
+
+}
 
 @media screen and (max-width: 768px) {
 
 }
 
 @media (max-width: 480px) {
-  
+
   .thumbnail {
     margin: 30px auto;
     text-align: center;
     float: none;
   }
-  
+
   .well p {
     text-align: justify;
   }

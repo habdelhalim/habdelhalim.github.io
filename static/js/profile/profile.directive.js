@@ -25,16 +25,6 @@
     }
   });
 
-  module.directive('jobItem', function () {
-    return {
-      restrict: 'E',
-      scope: {
-        item: '='
-      },
-      template: '{{item}}'
-    }
-  });
-
   module.directive('skills', function () {
     return {
       restrict: 'E',

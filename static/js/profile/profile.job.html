@@ -1,14 +1,18 @@
-<div class="panel panel-info" data-ng-class="{'current': position.isCurrent}">
-  <div class="panel-heading">
-    <span class="glyphicon glyphicon-briefcase"></span> {{position.company}} -
-    <small>{{position.title}}</small>
-    <small class="pull-right badge">{{position.startDate}}</small>
+<div class="col-md-12 item">
+  <div class="row">
+    <h3 class="position-title">{{position.title}}
+      <small class="position-time">{{position.startDate}} - Present</small>
+    </h3>
   </div>
-  <div class="panel-body">
-    <ul>
-      <li data-ng-repeat="itm in position.items">
-        <job-item item="itm"></job-item>
-      </li>
-    </ul>
+  <div class="row">
+    <div class="position-company">{{position.company}}</div>
   </div>
-</div> <!-- end-panel -->
+  <div class="row">
+    <div class="position-details">
+      <ul>
+        <li data-ng-repeat="item in position.items">{{item}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+

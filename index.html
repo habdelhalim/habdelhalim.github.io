@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
   <title>Hasan Abdel Halim</title>
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
   <!-- Bootstrap core CSS -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -39,24 +39,22 @@
       <profile-intro profile="profile"></profile-intro>
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-8">
-      <job position="position" data-ng-repeat="position in positions"></job>
+      <section class="section">
+        <h2><i class="fa fa-briefcase"></i> Experiences</h2>
+        <job position="position" data-ng-repeat="position in positions"></job>
+      </section><!--//section-->
     </div>
 
     <div class="col-md-4">
-      <div class="row">
-        <about-me profile="profile"></about-me>
-        <skills skills="profile.skills.values"></skills>
-        <education educations="profile.educations.values"></education>
-        <language languages="profile.languages.values"></language>
-      </div>
+      <about-me profile="profile"></about-me>
+      <skills skills="profile.skills.values"></skills>
+      <education educations="profile.educations.values"></education>
+      <language languages="profile.languages.values"></language>
     </div>
-
   </div> <!-- end-row -->
-
-  <div class="row marketing">
-  </div>
 
   <div class="footer">
     <p class="pull-right"><a href="{{profile.publicProfileUrl}}" rel="Hasan Abdel Halim">Hasan Abdel Halim 2015</a> &copy; </p>

@@ -94,22 +94,26 @@
             "values": [{
               "id": 1,
               "language": {
-                "name": "English"
+                "name": "English",
+                "level": 80
               }
             }, {
               "id": 2,
               "language": {
-                "name": "Arabic"
+                "name": "Arabic",
+                "level": 100
               }
             }, {
               "id": 3,
               "language": {
-                "name": "German"
+                "name": "German",
+                "level": 40
               }
             }, {
               "id": 4,
               "language": {
-                "name": "Turkish"
+                "name": "Turkish",
+                "level": 40
               }
             }]
           },

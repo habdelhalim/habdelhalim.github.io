@@ -1,6 +1,8 @@
-<h4><span class="glyphicon glyphicon-book"></span> Education</h4>
-<ul class="list-group">
-  <li class="list-group-item" data-ng-repeat="education in educations">
-    <span>{{education.degree}} {{education.fieldOfStudy}}</span>
-  </li>
-</ul>
+<div class="col-md-12">
+  <h3><span class="glyphicon glyphicon-book"></span> Education</h3>
+  <div class="item" data-ng-repeat="education in educations">
+    <h4>{{education.degree}} {{education.fieldOfStudy}}</h4>
+    <h5>{{education.schoolName}}</h5>
+    <h5>{{education.startDate.year}} - {{education.endDate.year}}</h5>
+  </div>
+</div>

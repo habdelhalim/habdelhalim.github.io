@@ -1,6 +1,13 @@
-<h4><span class="glyphicon glyphicon-flag"></span> Languages</h4>
-<ul class="list-group">
-  <li class="list-group-item" data-ng-repeat="lang in languages">
-    <span>{{lang.language.name}} </span>
-  </li>
-</ul>
+<div class="col-md-12">
+  <h3><span class="glyphicon glyphicon-flag"></span> Languages</h3>
+  <div class="" data-ng-repeat="lang in languages">
+    <h5>{{lang.language.name}} </h5>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info" role="progressbar"
+           aria-valuenow="{{lang.language.level}}" aria-valuemin="0" aria-valuemax="100"
+           ng-style="{'width': '{{lang.language.level}}%' }">
+        <span class="sr-only">{{lang.language.level}}% Complete (success)</span>
+      </div>
+    </div>
+  </div>
+</div>
