@@ -133,8 +133,24 @@
             "_total": 0
           },
           "positions": {
-            "_total": 7,
+            "_total": 8,
             "values": [{
+              "company": {
+                "id": 715280,
+                "industry": "Internet",
+                "name": "souq.com",
+                "size": "201-500 employees",
+                "type": "Privately Held"
+              },
+              "id": 362456914,
+              "isCurrent": true,
+              "startDate": {
+                "month": 1,
+                "year": 2013
+              },
+              "summary": "Customization and development of Apache Opentaps-based ERP system, which includes but not limited to:\n\n- Adapting the opentaps ERP system for Souq's business needs.\n\n- The Design & Development of brand new services, which help in speeding the warehouse operations like (picking, packing, and shipping).\n\n- Optimization of core services like MRP, Inventory Movement and reservation logic.\n\n- Design & Development of system modules like API, Monitoring Alerts, and Dashboard that facilitate easy retrieval of ERP information through secured web interfaces using JSON, or XML.",
+              "title": "Senior Java Developer"
+            }, {
               "company": {
                 "id": 715279,
                 "industry": "Internet",
@@ -616,7 +632,7 @@
               }
             }
           },
-          "introduction": "I am a Senior Software Engineer with over 14 years of Software Development experience, including Design, Code, Test, and Document software for a number of platforms. I have worked in a variety of application areas. However, my specialist skills lie in the development of intranet and internet applications. ",
+          "introduction": "I am a Senior Software Engineer with over 17 years of Software Development experience, including Design, Code, Test, and Document software for a number of platforms. I have worked in a variety of application areas. However, my specialist skills lie in the development of intranet and internet applications. ",
           "summary": "I have produced systems for several environments, particularly Windows, Linux and embedded systems. I develop software in Java, C++, C and PHP. I have a great deal of experience of developing software for internet and intranet applications. This includes Web services, Portals and Web applications. I am familiar with most of the current internet technologies including AJAX, (X)HTML, CSS, SOAP, etc.\n\nI have worked on many developments on all stages of the development life-cycle, from analysis through design, programming and testing to installation. I have worked on one man projects and projects with 50 to 100 people. I have performed many roles, usually design or programming but also team leadership, support and testing.\n\nI have a good academic record and considerable experience in the computer industry. I work hard and can provide excellent references from previous clients.\n\nSpecialties: Java,  J2EE, EJB, JPA, Hibernate, GWT, GXT, C++, C , PHP, SQL, XML, XHTML"
         };
 
