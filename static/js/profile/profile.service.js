@@ -136,22 +136,6 @@
             "_total": 8,
             "values": [{
               "company": {
-                "id": 715280,
-                "industry": "Internet",
-                "name": "souq.com",
-                "size": "201-500 employees",
-                "type": "Privately Held"
-              },
-              "id": 362456914,
-              "isCurrent": true,
-              "startDate": {
-                "month": 1,
-                "year": 2013
-              },
-              "summary": "Customization and development of Apache Opentaps-based ERP system, which includes but not limited to:\n\n- Adapting the opentaps ERP system for Souq's business needs.\n\n- The Design & Development of brand new services, which help in speeding the warehouse operations like (picking, packing, and shipping).\n\n- Optimization of core services like MRP, Inventory Movement and reservation logic.\n\n- Design & Development of system modules like API, Monitoring Alerts, and Dashboard that facilitate easy retrieval of ERP information through secured web interfaces using JSON, or XML.",
-              "title": "Senior Java Developer"
-            }, {
-              "company": {
                 "id": 715279,
                 "industry": "Internet",
                 "name": "souq.com",
