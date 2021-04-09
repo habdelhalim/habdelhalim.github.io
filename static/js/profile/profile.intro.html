@@ -1,12 +1,7 @@
-<div class="page-header">
-  <a href="{{profile.publicProfileUrl}}" rel="{{profile.formattedName}}'s profile"
-     class="pull-right" >
-    <img src="/static/img/profile.jpg" alt="{{profile.formattedName}}"
-         class="img-circle img-thumbnail"
-         style="height: 140px; width: 140px; margin: 10px 20px">
+<section id="intro">
+  <a href="{{profile.publicProfileUrl}}" rel="{{profile.formattedName}}'s profile">
+    <img id="profile-img" src="/static/img/profile.jpg" alt="{{profile.formattedName}}">
   </a>
-  <h1 class="media-heading">{{profile.formattedName}} <small>{{profile.headline}}</small></h1>
-
-  <p class="lead">{{profile.introduction}}</p>
-</div>
-
+  <h1 class="title">{{profile.formattedName}} <small>{{profile.headline}}</small></h1>
+  <p class="body">{{profile.introduction}}</p>
+</section>

@@ -1,132 +1,87 @@
 /* Space out content a bit */
+html {
+  font-size: 62.5%;
+}
+
 body {
   padding-top: 10px;
   padding-bottom: 20px;
   font-family: 'Roboto', sans-serif;
+  font-size: 1.6em;
   color: #545E6C;
+  margin: 0;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 15px;
-  padding-left: 15px;
+#container {
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+.title {
+  font-size: 1.4em;
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  padding-bottom: 19px;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
+.body {
+  font-size: 1em;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  border-bottom: 1px solid #e5e5e5;
+#intro {
+  font-size: 1.2em;
   padding: 10px;
 }
 
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
+#profile-img {
+  height: 140px;
+  width: 140px;
+  margin: 10px 20px;
+  border-radius: 90px;
+  border: #545E6C 1px dashed;
+  float: right;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
+#profile-img:after {
+  clear: right;
 }
 
-.marketing p + h4 {
-  margin-top: 28px;
+.job {
+  padding: 10px 20px;
 }
 
-.well .page-header {
-  margin-top: 10px;
+.job .time {
+  font-size: 0.8em;
+  padding: 0 5px;
+  float: right;
 }
 
-.well p {
-  white-space: pre-line;
-  line-height: 1.7em;
+.job .time:before {
+  content: "[ ";
 }
 
-p.job-desc {
-  font-size: 0.9em;
-  padding: 5px 10px;
-  white-space: pre-line;
-  line-height: 1.7em;
+.job .time:after {
+  content: " ]";
 }
 
-#skills span {
-  margin: 2px 2px;
+.job .company {
+  font-size: 0.8em;
+  padding: 0 5px;
+  float: right;
 }
 
-.well {
-
+.job .company:before {
+  content: "@ ";
 }
 
-.current {
-
+.job .title:after {
+  clear: both;
 }
 
-.thumbnail {
-  float: left;
-  margin: 0px 20px 20px 0px;
+.job .item {
+  padding: 5px;
+  list-style: square;
 }
 
-.item {
-  margin-bottom: 30px;
+.job:nth-child(odd) {
+  /*background: #f0f0f0;*/
 }
 
-.position-title {
-  color: #3F4650;
-}
-
-.position-time {
-  color: #97AAC3;
-  font-size: 0.54em;
-  float: right !important;
-}
-
-.position-company {
-  margin-bottom: 10px;
-  color: #97AAC3;
-}
-
-.position-details {
-
-}
-
-@media screen and (max-width: 768px) {
-
-}
-
-@media (max-width: 480px) {
-
-  .thumbnail {
-    margin: 30px auto;
-    text-align: center;
-    float: none;
-  }
-
-  .well p {
-    text-align: justify;
-  }
-}

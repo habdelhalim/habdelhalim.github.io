@@ -14,10 +14,6 @@
   <!-- Bootstrap core CSS -->
   <!-- Latest compiled and minified CSS -->
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
 
   <!-- Latest compiled and minified JavaScript -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,37 +31,12 @@
 
 <body data-ng-controller="ProfileController">
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <profile-intro profile="profile"></profile-intro>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-8">
-      <section class="section">
-        <h2><i class="fa fa-briefcase"></i> Experiences</h2>
-        <job position="position" data-ng-repeat="position in positions"></job>
-      </section><!--//section-->
-    </div>
-
-    <div class="col-md-4">
-      <about-me profile="profile"></about-me>
-      <skills skills="profile.skills.values"></skills>
-      <education educations="profile.educations.values"></education>
-      <language languages="profile.languages.values"></language>
-    </div>
-  </div> <!-- end-row -->
-
-  <div class="footer">
-    <p class="pull-right"><a href="{{profile.publicProfileUrl}}" rel="Hasan Abdel Halim">Hasan Abdel Halim 2020</a> &copy; </p>
-  </div>
-
+<div id="container">
+  <intro profile="profile"></intro>
+  <jobs positions="positions"></jobs>
+  <additional profile="profile"></additional>
+  <footer profile="profile"></footer>
 </div> <!-- /container -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
 
 </body>
 </html>

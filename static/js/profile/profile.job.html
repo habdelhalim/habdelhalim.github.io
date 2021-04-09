@@ -1,18 +1,10 @@
-<div class="col-md-12 item">
-  <div class="row">
-    <h3 class="position-title">{{position.title}}
-      <small class="position-time">{{position.startDate}} - {{position.endDate}}</small>
-    </h3>
-  </div>
-  <div class="row">
-    <div class="position-company">{{position.company}}</div>
-  </div>
-  <div class="row">
-    <div class="position-details">
-      <ul>
-        <li data-ng-repeat="item in position.items">{{item}}</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
+<section class="job">
+  <h3 class="title">
+    <span class="time">{{position.startDate}} - {{position.endDate}}</span>
+    {{position.title}}
+    <span class="company">{{position.company}}</span>
+  </h3>
+  <ul class="body">
+    <li class="item" data-ng-repeat="item in position.items">{{item}}</li>
+  </ul>
+</section>
